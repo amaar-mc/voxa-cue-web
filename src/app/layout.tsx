@@ -28,6 +28,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Voxa Cue" }],
   creator: "Voxa Cue",
+  other: {
+    "darkreader-lock": "true",
+  },
   openGraph: {
     title: "Voxa Cue | Private coaching, right on cue",
     description:
