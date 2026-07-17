@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --canvas: #f3f4f1;
-  --surface: #fcfdf9;
+  --canvas: #f6f4ef;
+  --surface: #fffefa;
   --ink: #0b171b;
   --ink-soft: #536367;
   --signal: #0b756f;
@@ -12,7 +12,6 @@
   --copper-soft: #f3e7dc;
   --line: rgba(11, 23, 27, 0.1);
   --font-sans: var(--font-manrope);
-  --font-editorial: var(--font-newsreader);
   --ease-cue: cubic-bezier(0.32, 0.72, 0, 1);
   --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -35,6 +34,18 @@ body {
   line-height: 1.5;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 body::after {
@@ -76,9 +87,9 @@ select {
 }
 
 .section-shell {
-  width: min(100%, 1440px);
+  width: min(100%, 1380px);
   margin-inline: auto;
-  padding-inline: clamp(1.25rem, 4vw, 4.5rem);
+  padding-inline: clamp(1.25rem, 4.5vw, 5rem);
 }
 
 .eyebrow {
@@ -348,9 +359,7 @@ select {
 .mobile-menu__inner > p {
   margin: 0 0 2.5rem;
   color: #89a09e;
-  font-family: var(--font-editorial), serif;
   font-size: 1.3rem;
-  font-style: italic;
 }
 
 .mobile-menu__inner > a:not(.mobile-menu__cta) {
@@ -413,13 +422,11 @@ select {
   line-height: 0.89;
 }
 
-.hero h1 em {
+.hero h1 span {
   display: block;
   margin-top: 0.22em;
   color: var(--signal);
-  font-family: var(--font-editorial), serif;
-  font-weight: 440;
-  font-style: italic;
+  font-weight: 560;
   letter-spacing: -0.045em;
   line-height: 0.92;
 }
@@ -456,33 +463,11 @@ select {
   transform: translateY(0.22rem);
 }
 
-.hero__proof {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-  margin-top: 2.3rem;
-}
-
-.hero__proof span {
-  padding: 0.45rem 0.68rem;
-  border-radius: 999px;
-  color: #4d5f62;
-  background: rgba(252, 253, 249, 0.72);
-  box-shadow: inset 0 0 0 1px rgba(11, 23, 27, 0.07);
-  font-size: 0.68rem;
-  font-weight: 650;
-}
-
 .media-shell {
   padding: 0.48rem;
   border-radius: 2.55rem;
   background: rgba(11, 23, 27, 0.055);
   box-shadow: inset 0 0 0 1px rgba(11, 23, 27, 0.05), 0 2.2rem 5.5rem rgba(11, 23, 27, 0.11);
-}
-
-.media-shell.is-dark {
-  background: rgba(11, 23, 27, 0.13);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1), 0 2.5rem 5.8rem rgba(11, 23, 27, 0.14);
 }
 
 .media-core {
@@ -513,56 +498,6 @@ select {
   object-position: 52% center;
 }
 
-.hero__caption {
-  position: absolute;
-  right: 1.15rem;
-  bottom: 1.15rem;
-  left: 1.15rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.7rem 0.75rem 0.7rem 1rem;
-  border-radius: 999px;
-  color: var(--ink);
-  background: rgba(248, 247, 242, 0.94);
-  box-shadow: inset 0 0 0 1px rgba(11, 23, 27, 0.08);
-}
-
-.hero__caption span {
-  font-size: 0.72rem;
-  font-weight: 760;
-}
-
-.hero__caption p {
-  margin: 0;
-  color: var(--ink-soft);
-  font-size: 0.66rem;
-}
-
-.manifesto {
-  padding-top: clamp(7rem, 12vw, 11rem);
-  padding-bottom: clamp(7rem, 12vw, 11rem);
-}
-
-.manifesto p {
-  max-width: 20ch;
-  margin: 0 auto;
-  font-size: clamp(2.5rem, 6.2vw, 6rem);
-  font-weight: 480;
-  letter-spacing: -0.065em;
-  line-height: 0.98;
-  text-align: center;
-}
-
-.manifesto p span {
-  display: block;
-  color: var(--signal);
-  font-family: var(--font-editorial), serif;
-  font-style: italic;
-  letter-spacing: -0.04em;
-}
-
 .story {
   display: grid;
   grid-template-columns: minmax(0, 1.28fr) minmax(18rem, 0.72fr);
@@ -578,19 +513,6 @@ select {
 .story__media img {
   height: 100%;
   object-fit: cover;
-}
-
-.image-note {
-  position: absolute;
-  bottom: 1.1rem;
-  left: 1.1rem;
-  padding: 0.62rem 0.8rem;
-  border-radius: 999px;
-  color: var(--ink);
-  background: rgba(248, 247, 242, 0.94);
-  box-shadow: inset 0 0 0 1px rgba(11, 23, 27, 0.08);
-  font-size: 0.7rem;
-  font-weight: 680;
 }
 
 .story__copy {
@@ -626,7 +548,7 @@ select {
 .live-steps {
   display: grid;
   grid-column: 1 / -1;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.75rem;
   margin: clamp(2.7rem, 6vw, 5rem) 0 0;
   padding: 0;
@@ -761,67 +683,6 @@ select {
   font-size: 0.68rem;
 }
 
-.haptic-demo__stage {
-  display: grid;
-  min-height: 33rem;
-  grid-template-columns: 0.9fr 1.1fr;
-  align-items: center;
-  gap: clamp(1rem, 4vw, 3rem);
-  padding: clamp(1.5rem, 4vw, 4rem);
-  border-radius: calc(2.7rem - 0.58rem);
-  background: radial-gradient(circle at 24% 42%, rgba(168, 94, 36, 0.22), transparent 29%), #f2efe8;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.75);
-}
-
-.haptic-demo__wrist {
-  position: relative;
-  width: min(100%, 13rem);
-  aspect-ratio: 0.52;
-  margin-inline: auto;
-  border-radius: 48% 43% 42% 50%;
-  background: linear-gradient(110deg, #a8603b 0%, #d69a72 37%, #b87450 74%, #8e4f33 100%);
-  box-shadow: 1.7rem 1.8rem 3rem rgba(65, 31, 18, 0.18), inset 0.7rem 0 rgba(255, 255, 255, 0.12), inset -0.45rem 0 rgba(68, 30, 17, 0.12);
-  transform: rotate(8deg);
-}
-
-.haptic-demo__band {
-  position: absolute;
-  top: 42%;
-  left: 50%;
-  display: block;
-  width: 132%;
-  height: 5rem;
-  border-radius: 1.45rem;
-  background: linear-gradient(180deg, #222c2f, #091114);
-  box-shadow: 0 0.8rem 1.5rem rgba(11, 23, 27, 0.28), inset 0 1px rgba(255, 255, 255, 0.14);
-  transform: translate(-50%, -50%) rotate(-2deg);
-}
-
-.haptic-demo__band::before {
-  position: absolute;
-  top: 0.45rem;
-  right: 16%;
-  bottom: 0.45rem;
-  left: 16%;
-  border-radius: 1.12rem;
-  content: "";
-  background: linear-gradient(145deg, #434b4c, #20282a);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.18), inset 0 0 0 1px rgba(0, 0, 0, 0.28);
-}
-
-.haptic-demo__window {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 1;
-  width: 2.1rem;
-  height: 0.55rem;
-  border-radius: 999px;
-  background: #0b756f;
-  box-shadow: 0 0 0 0.2rem #172426, inset 0 1px rgba(255, 255, 255, 0.3), 0 0 1.2rem rgba(52, 184, 170, 0.35);
-  transform: translate(-50%, -50%);
-}
-
 .haptic-demo__readout {
   color: var(--ink);
 }
@@ -836,10 +697,8 @@ select {
 .haptic-demo__readout > strong {
   display: block;
   margin-top: 0.38rem;
-  font-family: var(--font-editorial), serif;
   font-size: clamp(2rem, 4vw, 3.7rem);
-  font-weight: 470;
-  font-style: italic;
+  font-weight: 520;
   letter-spacing: -0.045em;
   line-height: 1;
 }
@@ -920,17 +779,6 @@ select {
   place-items: center;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.65);
-}
-
-.haptics__note {
-  max-width: 54rem;
-  margin: 2.2rem auto 0;
-  color: #91a7a4;
-  font-family: var(--font-editorial), serif;
-  font-size: clamp(1.2rem, 2.1vw, 1.75rem);
-  font-style: italic;
-  line-height: 1.5;
-  text-align: center;
 }
 
 .insights {
@@ -1031,10 +879,8 @@ select {
 
 .phone-heading > div > strong {
   margin-top: 0.25rem;
-  font-family: var(--font-editorial), serif;
   font-size: 2rem;
-  font-weight: 480;
-  font-style: italic;
+  font-weight: 560;
   letter-spacing: -0.045em;
 }
 
@@ -1474,8 +1320,6 @@ select {
 .site-footer__brand p {
   margin: 0.9rem 0 0;
   color: var(--ink-soft);
-  font-family: var(--font-editorial), serif;
-  font-style: italic;
 }
 
 .site-footer__links {
@@ -1540,9 +1384,7 @@ select {
 .legal-page .legal-intro {
   margin: 0 0 4rem;
   color: var(--ink-soft);
-  font-family: var(--font-editorial), serif;
   font-size: 1.35rem;
-  font-style: italic;
   line-height: 1.55;
 }
 
@@ -1667,7 +1509,6 @@ select {
     object-position: 54% center;
   }
 
-  .manifesto,
   .story,
   .haptics .section-shell,
   .insights,
@@ -1705,10 +1546,6 @@ select {
   .haptic-demo__controls {
     display: grid;
     grid-template-columns: 1fr 1fr;
-  }
-
-  .haptic-demo__stage {
-    min-height: 31rem;
   }
 
   .app-preview {
@@ -1779,16 +1616,6 @@ select {
     width: 100%;
   }
 
-  .hero__caption {
-    align-items: flex-start;
-    border-radius: 1.1rem;
-    flex-direction: column;
-  }
-
-  .hero__caption p {
-    line-height: 1.4;
-  }
-
   .media-shell,
   .app-preview {
     border-radius: 1.9rem;
@@ -1796,10 +1623,6 @@ select {
 
   .media-core {
     border-radius: calc(1.9rem - 0.48rem);
-  }
-
-  .manifesto p {
-    font-size: clamp(2.8rem, 13vw, 4.5rem);
   }
 
   .story h2,
@@ -1845,18 +1668,6 @@ select {
 
   .haptic-demo__controls button {
     min-height: 4.1rem;
-  }
-
-  .haptic-demo__stage {
-    grid-template-columns: 1fr;
-    min-height: auto;
-    padding: 2rem 1.2rem;
-    border-radius: calc(1.9rem - 0.38rem);
-  }
-
-  .haptic-demo__wrist {
-    width: 7.4rem;
-    aspect-ratio: 0.66;
   }
 
   .haptic-demo__readout {
@@ -1978,23 +1789,25 @@ select {
 }
 
 .hero {
-  min-height: min(100dvh, 58rem);
-  grid-template-columns: minmax(19rem, 0.74fr) minmax(32rem, 1.26fr);
-  gap: clamp(2.4rem, 4vw, 4.5rem);
-  padding-top: clamp(7.5rem, 12vh, 9rem);
-  padding-bottom: clamp(4.5rem, 7vw, 6.5rem);
+  min-height: min(100dvh, 62rem);
+  grid-template-columns: minmax(19rem, 0.7fr) minmax(32rem, 1.3fr);
+  gap: clamp(3rem, 5.5vw, 6rem);
+  padding-top: clamp(9.5rem, 15vh, 12rem);
+  padding-bottom: clamp(7rem, 10vw, 9.5rem);
 }
 
 .hero h1 {
   max-width: 13ch;
-  margin-block: 1.35rem 1.25rem;
-  font-size: clamp(3.1rem, 5.5vw, 5.25rem);
-  letter-spacing: -0.065em;
-  line-height: 0.96;
+  margin-block: 1.45rem 1.4rem;
+  font-size: clamp(3.15rem, 5.35vw, 5.4rem);
+  font-weight: 570;
+  letter-spacing: -0.067em;
+  line-height: 0.95;
 }
 
-.hero h1 em {
-  margin-top: 0.16em;
+.hero h1 span {
+  margin-top: 0.12em;
+  font-weight: 570;
   line-height: 0.98;
 }
 
@@ -2005,11 +1818,11 @@ select {
 }
 
 .hero__actions {
-  margin-top: 1.8rem;
+  margin-top: 2.2rem;
 }
 
 .hero__visual .media-core {
-  aspect-ratio: 1.43;
+  aspect-ratio: 1.5;
 }
 
 .hero__visual img {
@@ -2017,9 +1830,9 @@ select {
 }
 
 .story {
-  gap: clamp(2.5rem, 5vw, 5rem);
-  padding-top: clamp(5.5rem, 8vw, 7.5rem);
-  padding-bottom: clamp(5.5rem, 8vw, 7.5rem);
+  gap: clamp(3rem, 6vw, 6rem);
+  padding-top: clamp(8rem, 12vw, 11.5rem);
+  padding-bottom: clamp(8rem, 12vw, 11.5rem);
 }
 
 .story__media .media-core {
@@ -2036,21 +1849,23 @@ select {
 .detail h2,
 .privacy h2,
 .waitlist h2 {
-  margin-block: 1rem 0.85rem;
-  font-size: clamp(2.35rem, 4.25vw, 4.3rem);
-  letter-spacing: -0.058em;
-  line-height: 1;
+  margin-block: 1.15rem 1rem;
+  font-size: clamp(2.5rem, 4.35vw, 4.55rem);
+  font-weight: 540;
+  letter-spacing: -0.06em;
+  line-height: 0.99;
 }
 
 .live-steps {
-  gap: 1.5rem;
-  margin-top: clamp(2.5rem, 4vw, 3.6rem);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.5rem, 3vw, 3rem);
+  margin-top: clamp(4rem, 7vw, 6.5rem);
 }
 
 .live-steps li,
 .live-steps li:nth-child(even) {
-  min-height: 10.5rem;
-  padding: 1.15rem 0 0;
+  min-height: 11.5rem;
+  padding: 1.35rem 0 0;
   border-radius: 0;
   background: transparent;
   box-shadow: inset 0 1px var(--line);
@@ -2061,7 +1876,7 @@ select {
   display: block;
   width: auto;
   height: auto;
-  margin-bottom: 2.2rem;
+  margin-bottom: 2.8rem;
   color: var(--signal);
   background: transparent;
   box-shadow: none;
@@ -2070,12 +1885,12 @@ select {
 }
 
 .live-steps h3 {
-  font-size: 0.92rem;
+  font-size: 1rem;
 }
 
 .live-steps p {
-  max-width: 15rem;
-  font-size: 0.73rem;
+  max-width: 19rem;
+  font-size: 0.78rem;
 }
 
 .haptics {
@@ -2084,8 +1899,8 @@ select {
 }
 
 .haptics .section-shell {
-  padding-top: clamp(5.5rem, 9vw, 8rem);
-  padding-bottom: clamp(5.5rem, 9vw, 8rem);
+  padding-top: clamp(8rem, 12vw, 11.5rem);
+  padding-bottom: clamp(8rem, 12vw, 11.5rem);
 }
 
 .section-heading {
@@ -2107,7 +1922,7 @@ select {
   display: grid;
   grid-template-columns: minmax(28rem, 1.35fr) minmax(18rem, 0.65fr);
   gap: 1rem;
-  margin-top: clamp(2.7rem, 5vw, 4.2rem);
+  margin-top: clamp(4rem, 7vw, 6.5rem);
   padding: 0;
   border-radius: 0;
   background: transparent;
@@ -2128,37 +1943,14 @@ select {
   display: block;
   width: 100%;
   height: 100%;
-  min-height: 30rem;
+  min-height: 32rem;
   object-fit: cover;
   object-position: 52% center;
 }
 
-.haptic-demo__engineering figcaption {
-  position: absolute;
-  right: 1rem;
-  bottom: 1rem;
-  left: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.75rem 0.9rem;
-  border-radius: 0.85rem;
-  color: var(--ink);
-  background: rgba(248, 247, 242, 0.96);
-  box-shadow: inset 0 0 0 1px rgba(11, 23, 27, 0.07);
-  font-size: 0.66rem;
-  font-weight: 760;
-}
-
-.haptic-demo__engineering figcaption span {
-  color: var(--ink-soft);
-  font-weight: 560;
-}
-
 .haptic-demo__panel {
   display: flex;
-  padding: 1.3rem;
+  padding: clamp(1.35rem, 2vw, 2rem);
   border-radius: 1.6rem;
   flex-direction: column;
   background: rgba(252, 253, 249, 0.82);
@@ -2232,7 +2024,7 @@ select {
 
 .haptic-demo__readout {
   margin-top: auto;
-  padding-top: 2rem;
+  padding-top: 3rem;
   color: var(--ink);
 }
 
@@ -2245,10 +2037,8 @@ select {
 .haptic-demo__readout > strong {
   display: block;
   margin-top: 0.35rem;
-  font-family: var(--font-editorial), serif;
-  font-size: clamp(1.7rem, 2.5vw, 2.35rem);
-  font-weight: 480;
-  font-style: italic;
+  font-size: clamp(1.8rem, 2.6vw, 2.55rem);
+  font-weight: 560;
   letter-spacing: -0.035em;
   line-height: 1.05;
 }
@@ -2289,30 +2079,21 @@ select {
   background: rgba(255, 255, 255, 0.7);
 }
 
-.haptics__note {
-  max-width: 42rem;
-  margin: 1.8rem 0 0 auto;
-  color: var(--ink-soft);
-  font-size: clamp(1rem, 1.45vw, 1.25rem);
-  line-height: 1.5;
-  text-align: left;
-}
-
 .insights {
   grid-template-columns: minmax(20rem, 0.9fr) minmax(24rem, 1.1fr);
-  gap: clamp(3rem, 6vw, 6rem);
-  padding-top: clamp(5.5rem, 9vw, 8rem);
-  padding-bottom: clamp(5.5rem, 9vw, 8rem);
+  gap: clamp(4rem, 8vw, 8rem);
+  padding-top: clamp(8rem, 12vw, 11.5rem);
+  padding-bottom: clamp(8rem, 12vw, 11.5rem);
 }
 
 .metric-list {
-  gap: 0 1.2rem;
-  margin-top: 2rem;
+  gap: 0 1.75rem;
+  margin-top: 3rem;
 }
 
 .metric-list > div {
-  min-height: 6rem;
-  padding: 0.9rem 0;
+  min-height: 6.5rem;
+  padding: 1.1rem 0;
   border-radius: 0;
   background: transparent;
   box-shadow: inset 0 1px var(--line);
@@ -2339,9 +2120,9 @@ select {
 }
 
 .detail {
-  gap: clamp(3rem, 7vw, 7rem);
-  padding-top: clamp(5.5rem, 8vw, 7.5rem);
-  padding-bottom: clamp(5.5rem, 9vw, 8rem);
+  gap: clamp(4rem, 9vw, 9rem);
+  padding-top: clamp(8rem, 12vw, 11.5rem);
+  padding-bottom: clamp(8rem, 12vw, 11.5rem);
 }
 
 .detail dl {
@@ -2366,9 +2147,9 @@ select {
 }
 
 .privacy__grid {
-  gap: clamp(3rem, 6vw, 6rem);
-  padding-top: clamp(5.5rem, 9vw, 8rem);
-  padding-bottom: clamp(5.5rem, 9vw, 8rem);
+  gap: clamp(4rem, 8vw, 8rem);
+  padding-top: clamp(8rem, 12vw, 11.5rem);
+  padding-bottom: clamp(8rem, 12vw, 11.5rem);
 }
 
 .privacy__copy > p {
@@ -2422,8 +2203,8 @@ select {
 }
 
 .waitlist {
-  padding-top: clamp(5.5rem, 9vw, 8rem);
-  padding-bottom: clamp(5.5rem, 9vw, 8rem);
+  padding-top: clamp(8rem, 12vw, 11.5rem);
+  padding-bottom: clamp(8rem, 12vw, 11.5rem);
 }
 
 .waitlist__shell {
@@ -2493,6 +2274,8 @@ select {
     min-height: auto;
     grid-template-columns: 1fr;
     gap: 2.4rem;
+    padding-top: 8.5rem;
+    padding-bottom: 6.5rem;
   }
 
   .hero__visual {
@@ -2504,6 +2287,21 @@ select {
     grid-template-columns: 1fr;
   }
 
+  .story,
+  .haptics .section-shell,
+  .insights,
+  .detail,
+  .privacy__grid,
+  .waitlist {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+
+  .live-steps {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
   .haptic-demo__engineering img {
     min-height: 0;
     aspect-ratio: 1.55;
@@ -2511,10 +2309,6 @@ select {
 
   .haptic-demo__panel {
     min-height: 29rem;
-  }
-
-  .haptics__note {
-    margin-left: 0;
   }
 
   .phone-screen {
@@ -2552,6 +2346,31 @@ select {
     font-size: clamp(2.35rem, 10.8vw, 3.35rem);
   }
 
+  .story,
+  .haptics .section-shell,
+  .insights,
+  .detail,
+  .privacy__grid,
+  .waitlist {
+    padding-top: 5.75rem;
+    padding-bottom: 5.75rem;
+  }
+
+  .live-steps {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+    margin-top: 3.75rem;
+  }
+
+  .live-steps li,
+  .live-steps li:nth-child(even) {
+    min-height: 9rem;
+  }
+
+  .live-steps li > span {
+    margin-bottom: 1.75rem;
+  }
+
   .haptic-demo__engineering {
     border-radius: 1.15rem;
   }
@@ -2559,12 +2378,6 @@ select {
   .haptic-demo__engineering img {
     aspect-ratio: 1.25;
     object-position: 52% center;
-  }
-
-  .haptic-demo__engineering figcaption {
-    align-items: flex-start;
-    border-radius: 0.65rem;
-    flex-direction: column;
   }
 
   .haptic-demo__panel {
