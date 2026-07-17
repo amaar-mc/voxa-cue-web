@@ -10,25 +10,25 @@ const liveSteps = [
   {
     number: "01",
     title: "Set your goal",
-    body: "Choose pace, timing, and the cues you want.",
+    body: "Choose pace, time, and the cues that help.",
   },
   {
     number: "02",
     title: "Start speaking",
-    body: "Your iPhone reads delivery locally as you present.",
+    body: "Your iPhone reads delivery as you present.",
   },
   {
     number: "03",
     title: "Feel the cue",
-    body: "A distinct pattern helps you adjust without looking away.",
+    body: "The band taps. You adjust without looking away.",
   },
 ] as const;
 
 const insightMetrics = [
-  ["Pace", "Words per minute against your target"],
-  ["Fillers", "Context-aware patterns with transcript evidence"],
-  ["Timing", "Your finish against the time you set"],
-  ["Intonation", "Pitch variation across voiced speech"],
+  ["Pace", "Words per minute against your range"],
+  ["Fillers", "Clusters with transcript evidence"],
+  ["Timing", "Your finish against the target"],
+  ["Intonation", "Pitch movement while voiced"],
 ] as const;
 
 export default function Home() {
@@ -39,19 +39,18 @@ export default function Home() {
       <section className="hero section-shell" aria-labelledby="hero-title">
         <div className="hero__copy reveal">
           <span className="eyebrow">
-            Private guidance, right on cue
+            Phone-first speaking coach
           </span>
           <h1 id="hero-title">
             Stay with the room.
             <span>Your wrist keeps pace.</span>
           </h1>
           <p>
-            Voxa Cue turns pace, filler patterns, and timing into discreet
-            signals you can feel without looking away.
+            Pace, filler patterns, and time become quiet signals on your wrist.
           </p>
           <div className="hero__actions">
             <a className="primary-button button-press" href="#waitlist">
-              Join the first wearers
+              Join the prototype
               <span className="button-orb" aria-hidden="true">
                 ↗
               </span>
@@ -95,10 +94,9 @@ export default function Home() {
         </div>
 
         <div className="story__copy reveal">
-          <span className="eyebrow">The live loop</span>
-          <h2 id="story-title">Your phone listens. You keep the room.</h2>
+          <h2 id="story-title">Your phone listens. You stay present.</h2>
           <p>
-            Live decisions stay on your iPhone, where they stay fast and private.
+            Live coaching runs on your iPhone, not in the cloud.
           </p>
         </div>
 
@@ -118,10 +116,10 @@ export default function Home() {
       <section className="haptics" id="haptics" aria-labelledby="haptics-title">
         <div className="section-shell">
           <div className="section-heading reveal">
-            <span className="eyebrow is-copper">A language you can feel</span>
-            <h2 id="haptics-title">Every signal means one thing.</h2>
+            <span className="eyebrow is-copper">The haptic language</span>
+            <h2 id="haptics-title">One cue. One meaning.</h2>
             <p>
-              Choose the cues that help, then leave the rest off.
+              Turn on only what helps.
             </p>
           </div>
           <div className="reveal">
@@ -133,9 +131,9 @@ export default function Home() {
       <section className="insights section-shell" id="insights" aria-labelledby="insights-title">
         <div className="insights__copy reveal">
           <span className="eyebrow">After the room clears</span>
-          <h2 id="insights-title">See what changed.</h2>
+          <h2 id="insights-title">See what shifted.</h2>
           <p>
-            Find the moment, understand the pattern, and know what to practice.
+            Find the moment. Know what to practice next.
           </p>
           <div className="metric-list">
             {insightMetrics.map(([name, definition]) => (
@@ -166,23 +164,22 @@ export default function Home() {
           </div>
         </div>
         <div className="detail__copy reveal">
-          <span className="eyebrow is-copper">Designed to disappear</span>
-          <h2 id="detail-title">Nothing else on your wrist.</h2>
+          <h2 id="detail-title">Made to fade away.</h2>
           <p>
-            One purpose: help you notice when delivery begins to drift.
+            No glow, sound, or glance down.
           </p>
           <dl>
             <div>
               <dt>Distinct</dt>
-              <dd>Separate patterns for pace, fillers, halfway, and target time</dd>
+              <dd>A pattern for each cue</dd>
             </div>
             <div>
               <dt>Configurable</dt>
-              <dd>Choose which cues are active, then tune pattern and strength</dd>
+              <dd>Choose pattern and strength</dd>
             </div>
             <div>
               <dt>Discreet</dt>
-              <dd>No screen glow, audible alert, or visible glance away</dd>
+              <dd>Silent, private, eyes-free</dd>
             </div>
           </dl>
         </div>
@@ -192,29 +189,29 @@ export default function Home() {
         <div className="section-shell privacy__grid">
           <div className="privacy__copy reveal">
             <span className="eyebrow is-light">Private by design</span>
-            <h2 id="privacy-title">Live guidance stays on your iPhone.</h2>
+            <h2 id="privacy-title">Your voice stays on your iPhone.</h2>
             <p>
-              Raw audio is not retained or uploaded. The band receives cue bytes,
-              not your voice or transcript.
+              Raw audio is never saved or sent. The band receives a pattern and
+              intensity, nothing more.
             </p>
           </div>
           <div className="privacy-flow reveal" aria-label="Voxa Cue data flow">
             <div>
               <span>01</span>
               <strong>iPhone microphone</strong>
-              <small>Transient audio buffers</small>
+              <small>Listens while you speak</small>
             </div>
             <i aria-hidden="true">→</i>
             <div>
               <span>02</span>
               <strong>Local analysis</strong>
-              <small>Pace, fillers, timing, voice</small>
+              <small>Reads delivery on-device</small>
             </div>
             <i aria-hidden="true">→</i>
             <div>
               <span>03</span>
               <strong>Bluetooth cue</strong>
-              <small>Pattern and intensity only</small>
+              <small>Sends pattern and strength</small>
             </div>
           </div>
           <aside className="consent-note reveal">
@@ -229,10 +226,10 @@ export default function Home() {
       <section className="waitlist section-shell" id="waitlist" aria-labelledby="waitlist-title">
         <div className="waitlist__shell reveal">
           <div className="waitlist__copy">
-            <span className="eyebrow is-light">Come practice with us</span>
-            <h2 id="waitlist-title">Take Voxa Cue into the room.</h2>
+            <span className="eyebrow is-light">Prototype access</span>
+            <h2 id="waitlist-title">Try it in a real room.</h2>
             <p>
-              Join prototype demos, wear tests, and the first real presentations.
+              Join a demo or wear test.
             </p>
           </div>
           <WaitlistForm />
