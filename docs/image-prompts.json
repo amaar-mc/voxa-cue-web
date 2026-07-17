@@ -1,0 +1,135 @@
+{
+  "generator": "OpenAI built-in image generation tool",
+  "generatedAt": "2026-07-16",
+  "brandReference": {
+    "canvas": "#F3F4F1",
+    "ink": "#0B171B",
+    "signal": "#0B756F",
+    "haptic": "#A85E24"
+  },
+  "assets": [
+    {
+      "id": "hero-product",
+      "output": "public/images/voxa-hero-product.webp",
+      "sourceOutput": "/Users/amaarchughtai/.codex/generated_images/019f6dac-dcb5-7a62-aac9-92ad6403e787/exec-813f6f1e-9370-4c64-aa69-1845d607ee9f.png",
+      "prompt": {
+        "use_case": "product-mockup",
+        "asset_type": "Voxa Cue marketing website hero image",
+        "primary_request": "Create a premium editorial product photograph of the exact Voxa Cue haptic wristband shown in the reference image. Preserve its slim graphite capsule, dark silicone loop, subtle teal indicator window, and refined copper haptic detail. Show one hero band and one secondary band resting naturally on a sculpted warm ivory stone plinth.",
+        "input_images": [
+          {
+            "image": "Image 1",
+            "role": "product geometry and material reference",
+            "invariants": "preserve the industrial graphite wearable form, dark strap, teal indicator, copper accent, proportions, and restraint"
+          }
+        ],
+        "scene_backdrop": "quiet architectural studio with softly curved warm ivory plaster planes and a distant deep graphite wall",
+        "subject": "Voxa Cue wearable, fully visible, physically plausible, product-forward",
+        "style_medium": "photorealistic luxury consumer technology campaign photography, tactile editorial realism",
+        "composition_framing": "wide landscape hero composition, wearable large on the right half, substantial clean negative space on the left for website headline, slight low three-quarter camera angle, 85mm lens feel",
+        "lighting_mood": "soft directional morning light, precise edge highlights, controlled low-contrast shadows, calm and assured",
+        "color_palette": ["warm ivory #F3F4F1", "graphite #0B171B", "voice signal teal #0B756F", "haptic copper #A85E24"],
+        "materials_textures": "satin graphite metal, matte silicone, brushed copper, fine mineral plaster grain, realistic contact shadows",
+        "text": "none",
+        "constraints": ["no words", "no logos", "no watermark", "no floating objects", "no generic smartwatch screen", "no purple", "no blue neon", "no science-fiction glow", "product remains recognizable and manufacturable", "clean left-side negative space"],
+        "avoid": ["Apple Watch resemblance", "oversized display", "jewelry glamour", "CGI plastic sheen", "extra buttons", "incorrect strap attachment"]
+      }
+    },
+    {
+      "id": "presenter-lifestyle",
+      "output": "public/images/voxa-presenter.webp",
+      "sourceOutput": "/Users/amaarchughtai/.codex/generated_images/019f6dac-dcb5-7a62-aac9-92ad6403e787/exec-eff7f395-454f-4c16-8886-1fe06dfb7e0d.png",
+      "prompt": {
+        "use_case": "photorealistic-natural",
+        "asset_type": "Voxa Cue marketing website lifestyle feature image",
+        "primary_request": "Create a candid editorial photograph of a confident young presenter speaking to a small, attentive audience in a bright modern studio. They are wearing the exact slim graphite Voxa Cue haptic wristband from the references on the wrist of their natural gesturing hand. A phone rests unobtrusively face-up on a side table several feet away, listening during the talk. The presenter is focused on the audience, never looking at a screen.",
+        "input_images": [
+          {
+            "image": "Image 1",
+            "role": "wearable product geometry reference",
+            "invariants": "preserve graphite capsule, dark silicone strap, subtle teal window, compact proportions"
+          },
+          {
+            "image": "Image 2",
+            "role": "product material and campaign lighting reference",
+            "invariants": "match tactile graphite, warm ivory, teal, and copper visual language"
+          }
+        ],
+        "scene_backdrop": "warm modern presentation studio with ivory plaster, graphite acoustic panel, soft window light, intimate seated audience softly out of focus",
+        "subject": "one natural presenter, waist-up, mid-sentence, relaxed open gesture, authentic expression and skin texture",
+        "style_medium": "photorealistic premium editorial lifestyle campaign, candid rather than posed",
+        "composition_framing": "wide landscape, presenter on left-center, gesturing wrist and wearable sharply readable, audience and phone contextual but secondary, 50mm lens, shallow natural depth of field",
+        "lighting_mood": "soft lateral daylight, warm skin, quiet confidence, no dramatic spotlight",
+        "color_palette": ["warm ivory #F3F4F1", "graphite #0B171B", "voice signal teal #0B756F", "restrained haptic copper #A85E24"],
+        "materials_textures": "real skin pores, softly wrinkled cotton shirt, matte silicone wearable, plaster and walnut details",
+        "text": "none",
+        "constraints": ["no words", "no logos", "no watermark", "no microphone headset", "no podium", "no phone held by presenter", "no looking at a screen", "wearable must remain compact and believable", "natural hands and fingers", "inclusive contemporary professional setting"],
+        "avoid": ["generic corporate stock photo", "purple lighting", "blue neon", "oversmoothed skin", "crowded conference hall", "smartwatch display", "exaggerated vibration graphics"]
+      }
+    },
+    {
+      "id": "wrist-detail",
+      "output": "public/images/voxa-wrist-detail.webp",
+      "sourceOutput": "/Users/amaarchughtai/.codex/generated_images/019f6dac-dcb5-7a62-aac9-92ad6403e787/exec-85e2a69c-e943-4cd2-9541-31cd964e0cfd.png",
+      "prompt": {
+        "use_case": "product-mockup",
+        "asset_type": "Voxa Cue marketing website product detail image",
+        "primary_request": "Create an intimate macro editorial photograph of the exact Voxa Cue wearable on a presenter's wrist during a natural open-hand gesture. Preserve the compact graphite capsule and dark silicone strap, with the subtle teal indicator visible. Suggest one private haptic moment only through a faint warm copper light reflection on the skin and product edge, not through drawn rings or visual effects.",
+        "input_images": [
+          {
+            "image": "Image 1",
+            "role": "wearable geometry reference",
+            "invariants": "preserve graphite capsule shape, teal indicator, dark strap, compact scale"
+          },
+          {
+            "image": "Image 2",
+            "role": "campaign materials and color reference",
+            "invariants": "match restrained product photography and warm architectural palette"
+          }
+        ],
+        "scene_backdrop": "softly blurred warm ivory presentation room with a graphite shadow plane",
+        "subject": "natural human forearm and hand wearing Voxa Cue, anatomically accurate, tactile product detail",
+        "style_medium": "photorealistic luxury product lifestyle photography with documentary restraint",
+        "composition_framing": "portrait-oriented close crop, wrist and wearable in sharp focus near lower center, relaxed fingers extending upward, shallow depth of field, 90mm macro lens feel",
+        "lighting_mood": "gentle side light, calm concentration, quiet tactile intimacy",
+        "color_palette": ["warm ivory #F3F4F1", "graphite #0B171B", "voice signal teal #0B756F", "haptic copper #A85E24"],
+        "materials_textures": "real skin texture, matte silicone, brushed graphite, fine copper reflection",
+        "text": "none",
+        "constraints": ["no words", "no logos", "no watermark", "no smartwatch display", "no holograms", "no illustrated vibration rings", "anatomically correct hand and wrist", "wearable remains small, discreet, and manufacturable"],
+        "avoid": ["purple", "blue neon", "jewelry styling", "fitness tracker UI", "oversmoothed skin", "extra fingers", "glowing superhero effect"]
+      }
+    },
+    {
+      "id": "engineering-exploded-view",
+      "output": "public/images/voxa-engineering.webp",
+      "sourceOutput": "/Users/amaarchughtai/.codex/generated_images/019f6dac-dcb5-7a62-aac9-92ad6403e787/exec-f1e50c11-2475-4132-a390-584b1d6f82f4.png",
+      "prompt": {
+        "use_case": "product-mockup",
+        "asset_type": "Voxa Cue marketing website engineering detail",
+        "primary_request": "Create a premium, physically believable exploded engineering product photograph of the exact slim Voxa Cue haptic wristband from the references. Show the wearable capsule separated into five precise layers along one shallow diagonal axis: satin graphite top enclosure with the small teal indicator aperture, a thin dark structural frame, a compact green microcontroller board with realistic tiny components but no readable markings, one copper-toned circular linear resonant haptic actuator, and a graphite rear shell attached to the dark silicone wrist loop. Use subtle thin teal signal traces between the board and actuator to imply the haptic command path. Keep every component aligned, compact, restrained, and plausibly manufacturable.",
+        "input_images": [
+          {
+            "image": "Image 1",
+            "role": "wearable geometry and component language reference",
+            "invariants": "preserve slim rounded graphite capsule, dark strap, teal indicator, copper haptic accent, and realistic proportions"
+          },
+          {
+            "image": "Image 2",
+            "role": "campaign material, light, and palette reference",
+            "invariants": "match the quiet ivory studio, satin graphite, restrained teal, and tactile copper treatment"
+          }
+        ],
+        "scene_backdrop": "seamless warm ivory studio surface with a barely perceptible mineral texture and ample negative space",
+        "subject": "an exploded Voxa Cue wearable assembly with enclosure, frame, microcontroller board, LRA haptic actuator, rear shell, and strap",
+        "style_medium": "photorealistic industrial design photography, premium engineering editorial, Apple design-process restraint without copying any Apple product",
+        "composition_framing": "wide landscape 3:2 composition, exploded wearable centered slightly right, parts separated by only a few centimeters, shallow three-quarter top view, full assembly visible, generous clean margins",
+        "lighting_mood": "soft overhead studio light, precise edge highlights, restrained contact shadows under each floating layer, calm and technical",
+        "color_palette": ["warm ivory #F3F4F1", "graphite #0B171B", "voice signal teal #0B756F", "haptic copper #A85E24", "muted PCB green"],
+        "materials_textures": "satin anodized graphite, matte silicone, brushed copper actuator, realistic fiberglass circuit board, tiny metal contacts, fine plaster grain",
+        "text": "none",
+        "constraints": ["no words", "no labels", "no numbers", "no logos", "no watermark", "no embedded UI", "no hands or people", "no purple", "no blue neon", "no science-fiction glow", "no oversized components", "no transparent holographic parts", "components remain aligned and mechanically plausible", "strap and enclosure match the reference product"],
+        "avoid": ["generic smartwatch", "fantasy circuitry", "floating unrelated chips", "dramatic black background", "explosion effect", "instruction manual diagram", "cartoon render", "glossy plastic", "fake screen"]
+      }
+    }
+  ]
+}
