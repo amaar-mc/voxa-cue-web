@@ -31,7 +31,7 @@ The website tells that story through:
 | Framework | Next.js 16 App Router |
 | Language | Strict TypeScript |
 | UI | React 19 and Tailwind CSS 4 |
-| Typography | Self-hosted Manrope and Newsreader through `next/font` |
+| Typography | Self-hosted Manrope through `next/font` |
 | Images | Optimized local WebP assets through `next/image` |
 | Testing | Vitest plus ESLint and TypeScript |
 | Deployment target | Vercel |
