@@ -24,6 +24,19 @@ export function SiteHeader() {
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, []);
 
+  useEffect(() => {
+    if (!open) {
+      return;
+    }
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [open]);
+
   return (
     <header className="site-header">
       <nav className="nav-island" aria-label="Primary navigation">
@@ -40,7 +53,7 @@ export function SiteHeader() {
         </div>
 
         <a className="nav-cta button-press" href="#waitlist">
-          Join the waitlist
+          Join the prototype
           <span className="button-orb" aria-hidden="true">
             ↗
           </span>
@@ -62,10 +75,13 @@ export function SiteHeader() {
       <div
         id="mobile-menu"
         className={open ? "mobile-menu is-open" : "mobile-menu"}
+        role="dialog"
+        aria-label="Site navigation"
+        aria-modal="true"
         aria-hidden={!open}
       >
         <div className="mobile-menu__inner">
-          <p>Private coaching, right on cue.</p>
+          <p>Quiet coaching while you speak.</p>
           {links.map((link, index) => (
             <a
               key={link.href}
@@ -84,7 +100,7 @@ export function SiteHeader() {
             onClick={() => setOpen(false)}
             tabIndex={open ? 0 : -1}
           >
-            Join the first wearers
+            Join the prototype
           </a>
         </div>
       </div>
