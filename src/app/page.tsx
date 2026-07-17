@@ -9,33 +9,26 @@ import { WaitlistForm } from "@/components/waitlist-form";
 const liveSteps = [
   {
     number: "01",
-    title: "Put the phone aside",
-    body: "The built-in iPhone microphone listens.",
+    title: "Set your goal",
+    body: "Choose pace, timing, and the cues you want.",
   },
   {
     number: "02",
-    title: "Voxa Cue reads delivery",
-    body: "On-device processing watches pace, fillers, and time.",
+    title: "Start speaking",
+    body: "Your iPhone reads delivery locally as you present.",
   },
   {
     number: "03",
-    title: "Your wrist gets the signal",
-    body: "Bluetooth sends one distinct haptic pattern.",
-  },
-  {
-    number: "04",
-    title: "You keep speaking",
-    body: "No glance, notification, or break in eye contact.",
+    title: "Feel the cue",
+    body: "A distinct pattern helps you adjust without looking away.",
   },
 ] as const;
 
 const insightMetrics = [
-  ["Pace", "Words per minute and time in your chosen range"],
-  ["Contextual fillers", "Counts with transcript evidence, not a blind word list"],
-  ["Timing", "Finish against the target you set before speaking"],
-  ["Intonation", "Pitch range summarized in semitones from voiced audio"],
-  ["Energy", "Variation in vocal level across the session"],
-  ["Talk ratio", "How much of the session contained detected speech"],
+  ["Pace", "Words per minute against your target"],
+  ["Fillers", "Context-aware patterns with transcript evidence"],
+  ["Timing", "Your finish against the time you set"],
+  ["Intonation", "Pitch variation across voiced speech"],
 ] as const;
 
 export default function Home() {
@@ -46,15 +39,15 @@ export default function Home() {
       <section className="hero section-shell" aria-labelledby="hero-title">
         <div className="hero__copy reveal">
           <span className="eyebrow">
-            Private coaching, right on cue
+            Private guidance, right on cue
           </span>
           <h1 id="hero-title">
             Stay with the room.
-            <em>Your wrist will know.</em>
+            <span>Your wrist keeps pace.</span>
           </h1>
           <p>
-            Voxa Cue turns pace, filler patterns, and timing into private haptic
-            guidance. No screen. No break in eye contact.
+            Voxa Cue turns pace, filler patterns, and timing into discreet
+            signals you can feel without looking away.
           </p>
           <div className="hero__actions">
             <a className="primary-button button-press" href="#waitlist">
@@ -81,10 +74,6 @@ export default function Home() {
                 sizes="(max-width: 768px) 100vw, 62vw"
                 priority
               />
-              <div className="hero__caption">
-                <span>Voxa Cue</span>
-                <p>Private cues for pace, fillers, and time.</p>
-              </div>
             </div>
           </div>
         </div>
@@ -101,7 +90,6 @@ export default function Home() {
                 height={941}
                 sizes="(max-width: 768px) 100vw, 58vw"
               />
-              <span className="image-note">Phone aside. Attention forward.</span>
             </div>
           </div>
         </div>
@@ -110,7 +98,7 @@ export default function Home() {
           <span className="eyebrow">The live loop</span>
           <h2 id="story-title">Your phone listens. You keep the room.</h2>
           <p>
-            Live decisions stay on the iPhone and never wait for the network.
+            Live decisions stay on your iPhone, where they stay fast and private.
           </p>
         </div>
 
@@ -131,17 +119,14 @@ export default function Home() {
         <div className="section-shell">
           <div className="section-heading reveal">
             <span className="eyebrow is-copper">A language you can feel</span>
-            <h2 id="haptics-title">One language for four moments.</h2>
+            <h2 id="haptics-title">Every signal means one thing.</h2>
             <p>
-              Choose the patterns and strength that help. Leave the rest off.
+              Choose the cues that help, then leave the rest off.
             </p>
           </div>
           <div className="reveal">
             <HapticDemo />
           </div>
-          <p className="haptics__note reveal">
-            Filler cues wait for a pattern. One calm wave, not a buzz for every word.
-          </p>
         </div>
       </section>
 
@@ -150,8 +135,7 @@ export default function Home() {
           <span className="eyebrow">After the room clears</span>
           <h2 id="insights-title">See what changed.</h2>
           <p>
-            Review the metric, find the transcript evidence, and choose one thing
-            to practice.
+            Find the moment, understand the pattern, and know what to practice.
           </p>
           <div className="metric-list">
             {insightMetrics.map(([name, definition]) => (
@@ -185,7 +169,7 @@ export default function Home() {
           <span className="eyebrow is-copper">Designed to disappear</span>
           <h2 id="detail-title">Nothing else on your wrist.</h2>
           <p>
-            Voxa Cue has one job: help you notice when delivery begins to drift.
+            One purpose: help you notice when delivery begins to drift.
           </p>
           <dl>
             <div>

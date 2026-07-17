@@ -62,10 +62,6 @@ export function HapticDemo() {
           height={971}
           sizes="(max-width: 820px) 100vw, 62vw"
         />
-        <figcaption>
-          Engineering visualization
-          <span>Prototype signal path and haptic actuator</span>
-        </figcaption>
       </figure>
 
       <div className="haptic-demo__panel">
@@ -88,7 +84,7 @@ export function HapticDemo() {
         <div className="haptic-demo__readout" aria-live="polite">
           <span>{active.name}</span>
           <strong>{active.signal}</strong>
-          <p>{active.explanation}</p>
+          <p className="sr-only">{active.explanation}</p>
           <div className="pulse-track" key={`${active.id}-${run}`} aria-hidden="true">
             {active.bars.map((height, index) => (
               <i
